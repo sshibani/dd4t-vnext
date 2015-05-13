@@ -4,39 +4,25 @@ using DD4T.ContentModel.Exceptions;
 using DD4T.ContentModel.Factories;
 using System;
 using System.Threading.Tasks;
-
-
+using Microsoft.Framework.Logging;
 
 namespace DD4T.Mvc.Controllers
 {
     public class PageController : Controller, IPageController
     {
         public IPageFactory PageFactory { get; private set; }
-
-        //private ILogger logger = null;
-        //public ILogger Logger
-        //{
-        //    get
-        //    {
-        //        if (logger == null)
-        //            logger = NullLogger.Create();
-
-        //        return logger;
-        //    }
-        //    set
-        //    {
-        //        logger = value;
-        //    }
-        //}
+        private readonly ILogger Logger;
         //Todo: Fixme
         //public IComponentPresentationRenderer ComponentPresentationRenderer { get; set; }
 
-        public PageController(IPageFactory pageFactory)
+        public PageController(IPageFactory pageFactory, ILoggerFactory loggerfactory)
         {
+            Logger = loggerfactory.CreateLogger<PageController>();
+
             if (pageFactory == null)
                 throw new ArgumentNullException("pageFactory");
 
-            //Logger.Debug("TridionPageController", pageFactory);
+            Logger.LogDebug("TridionPageController", pageFactory);
 
             PageFactory = pageFactory;
         }

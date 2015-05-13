@@ -1,12 +1,13 @@
 {
-  "version": "1.0.0-*",
-  "dependencies": {
-    "DD4T.ContentModel": "",
-    "DD4T.ContentModel.Contracts": "",
-    "Newtonsoft.Json": "6.0.6"
-  },
+    "version": "1.0.0-*",
+    "dependencies": {
+        "DD4T.ContentModel": "",
+        "DD4T.ContentModel.Contracts": "",
+        "Newtonsoft.Json": "6.0.6",
+        "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4"
+    },
 
-  "frameworks": {
-    "dnx451": { }
-  }
+    "frameworks": {
+        "dnx451": { }
+    }
 }

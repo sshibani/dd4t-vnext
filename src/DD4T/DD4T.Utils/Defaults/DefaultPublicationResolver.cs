@@ -5,19 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Framework.OptionsModel;
 
+
 namespace DD4T.Utils.Defaults
 {
     public class DefaultPublicationResolver : IPublicationResolver
     {
-        public DD4TConfiguration Config { get; private set; }
+        private readonly DD4TConfiguration Configuration;
+
         public DefaultPublicationResolver(IOptions<DD4TConfiguration> config)
         {
-            Config = null;
+            Configuration = config.Options;
         }
 
         public int ResolvePublicationId()
         {
-            return 3;
+            return Configuration.PublicationId;
         }
     }
 }

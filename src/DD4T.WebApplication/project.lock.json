@@ -6,6 +6,9 @@
       "Kestrel >= 1.0.0-beta4",
       "Microsoft.AspNet.Server.IIS >= 1.0.0-beta4",
       "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta4",
+      "Microsoft.Framework.ConfigurationModel >= 1.0.0-beta4",
+      "Microsoft.Framework.Logging >= 1.0.0-beta4",
+      "Microsoft.Framework.Logging.Console >= 1.0.0-beta4",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta4",
       "DD4T.Mvc >= 1.0.0-*",
       "DD4T.Providers.Mock ",
@@ -1543,6 +1546,40 @@
         "lib/net45/Microsoft.Framework.Logging.xml",
         "lib/portable-net451+win81+wpa81/Microsoft.Framework.Logging.dll",
         "lib/portable-net451+win81+wpa81/Microsoft.Framework.Logging.xml"
+      ]
+    },
+    "Microsoft.Framework.Logging.Console/1.0.0-beta4": {
+      "serviceable": true,
+      "sha": "8EC3z+rmENBeYWc4o57ZdmytUrzpT/6NvHIIM8sNpj3v/zMopqMs6Ie4LAKk/TxUjPPvxcR0vyajQB8z6TLCiA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.Framework.Logging.Console.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.Framework.Logging.Console.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.Framework.Logging.Console.1.0.0-beta4.nupkg",
+        "Microsoft.Framework.Logging.Console.1.0.0-beta4.nupkg.sha512",
+        "Microsoft.Framework.Logging.Console.nuspec",
+        "lib/dnx451/Microsoft.Framework.Logging.Console.dll",
+        "lib/dnx451/Microsoft.Framework.Logging.Console.xml",
+        "lib/dnxcore50/Microsoft.Framework.Logging.Console.dll",
+        "lib/dnxcore50/Microsoft.Framework.Logging.Console.xml",
+        "lib/net45/Microsoft.Framework.Logging.Console.dll",
+        "lib/net45/Microsoft.Framework.Logging.Console.xml"
       ]
     },
     "Microsoft.Framework.Logging.Interfaces/1.0.0-beta4": {

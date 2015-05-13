@@ -5,15 +5,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Framework.Logging;
 
 namespace DD4T.Factories
 {
     public abstract class FactoryBase
     {
         protected IProvider Provider;
+        protected readonly ILogger Logger;
         #region ctor 
-        public FactoryBase(IProvider provider)
+        public FactoryBase(IProvider provider, ILoggerFactory loggerfactory)
         {
+            Logger = loggerfactory.CreateLogger(typeof(FactoryBase).FullName);
             if (provider == null)
                 throw new ArgumentNullException("provider");
 

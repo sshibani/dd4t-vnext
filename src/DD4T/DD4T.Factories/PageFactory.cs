@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DD4T.ContentModel;
 using DD4T.ContentModel.Contracts.Providers;
 using Newtonsoft.Json;
+using Microsoft.Framework.Logging;
 
 namespace DD4T.Factories
 {
@@ -14,8 +15,8 @@ namespace DD4T.Factories
         private readonly IPageProvider PageProvider;
        // private readonly INewComponentPresentationProvider ComponentPresentationProvider;
 
-        public PageFactory(IPageProvider pageProvider)
-            : base(pageProvider)
+        public PageFactory(IPageProvider pageProvider, ILoggerFactory loggerfactory)
+            : base(pageProvider, loggerfactory)
         {
             PageProvider = pageProvider;
         }
