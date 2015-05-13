@@ -15,7 +15,7 @@
 //{
 //    public abstract class TridionController : Controller, IPageController, IComponentController
 //    {
-     
+
 //        public virtual IPageFactory PageFactory { get; set; }
 //        public virtual IComponentFactory ComponentFactory { get; set; }
 
@@ -128,7 +128,7 @@
 //            if (componentPresentation.ComponentTemplate.MetadataFields == null || !componentPresentation.ComponentTemplate.MetadataFields.ContainsKey("view"))
 //                viewName = componentPresentation.ComponentTemplate.Title.Replace(" ", "");
 //            else
-//                viewName = componentPresentation.ComponentTemplate.MetadataFields["view"].Value; 
+//                viewName = componentPresentation.ComponentTemplate.MetadataFields["view"].Value;
 
 //            if (string.IsNullOrEmpty(viewName))
 //            {
@@ -138,7 +138,7 @@
 
 //        }
 
-  
+
 //        public virtual IActionResult Page(string pageId)
 //        {
 //            IPage model = GetModelForPage(pageId);

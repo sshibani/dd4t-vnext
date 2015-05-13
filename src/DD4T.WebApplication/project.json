@@ -3,19 +3,23 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "Kestrel": "1.0.0-beta4",
     "Microsoft.AspNet.Server.IIS": "1.0.0-beta4",
     "Microsoft.AspNet.Server.WebListener": "1.0.0-beta4",
     "Microsoft.AspNet.Mvc": "6.0.0-beta4",
-    "DD4T.Mvc": "1.0.0-*"
+    "DD4T.Mvc": "1.0.0-*",
+    "DD4T.Providers.Mock": "",
+    "DD4T.Factories": "",
+    "DD4T.Utils": ""
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004"
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "dnx451": { }
   },
 
   "publishExclude": [

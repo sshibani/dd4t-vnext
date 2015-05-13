@@ -1,0 +1,12 @@
+{
+    "version": "1.0.0-*",
+    "dependencies": {
+      "System.Xml.XmlSerializer": "4.0.10-beta-22911",
+      "System.Threading.Tasks": "4.0.10-beta-22911"
+    },
+  
+    "frameworks": {
+        "dnx451": { }
+  }
+}
+  
