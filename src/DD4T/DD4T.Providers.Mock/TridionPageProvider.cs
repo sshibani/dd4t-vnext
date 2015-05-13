@@ -1,5 +1,6 @@
 ﻿using DD4T.ContentModel.Contracts.Providers;
 using DD4T.ContentModel.Contracts.Resolvers;
+using Microsoft.Framework.Logging;
 using System;
 using System.Threading.Tasks;
 
@@ -8,8 +9,8 @@ namespace DD4T.Providers.Mock
     public class TridionPageProvider : BaseProvider, IPageProvider
     {
 
-        public TridionPageProvider(IPublicationResolver publicationResolver)
-            : base (publicationResolver )
+        public TridionPageProvider(IPublicationResolver publicationResolver, ILoggerFactory loggerfactory)
+            : base (publicationResolver, loggerfactory)
         {
 
         }

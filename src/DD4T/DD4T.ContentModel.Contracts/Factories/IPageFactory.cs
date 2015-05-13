@@ -9,6 +9,8 @@ namespace DD4T.ContentModel.Factories
     public interface IPageFactory
     {
         Task<IPage> GetPage(string pageUrl);
+        //bool TryFindPage(string url, out IPage page);
+        //Task<IPage> FindPage(string url);
         //      IPageProvider PageProvider { get; set; }
         //      ICacheAgent CacheAgent { get; set; }
         //      IPublicationResolver PublicationResolver { get; set; }

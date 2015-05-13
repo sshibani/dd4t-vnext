@@ -32,12 +32,14 @@ namespace DD4T.Factories
             return await GetIPageObject(pageContentFromBroker);
         }
 
+      
+
         #region Private Helpers
         public async Task<IPage> GetIPageObject(string pageStringContent)
         {
             IPage page;
 
-            //Logger.Debug("GetIPageObject: about to deserialize and decompress", LoggingCategory.Performance);
+            //Logger.LogDebug("GetIPageObject: about to deserialize and decompress", LoggingCategory.Performance);
             JsonSerializerSettings s = new JsonSerializerSettings { };
             s.Converters.Add(new FieldConverter());
             //page = await JsonConvert.DeserializeObjectAsync<Page>(pageStringContent, s);
@@ -46,17 +48,17 @@ namespace DD4T.Factories
             //page = ProtoBuf.Serializer.Deserialize<Page>(new MemoryStream(Convert.FromBase64String(pageStringContent)));
             //var t = ProtoBuf.Serializer.Deserialize<TempModel>(new MemoryStream(Convert.FromBase64String(pageStringContent)));
 
-            //Logger.Debug("GetIPageObject: finished deserializing and decompressing", LoggingCategory.Performance);
+            //Logger.LogDebug("GetIPageObject: finished deserializing and decompressing", LoggingCategory.Performance);
             int orderOnPage = 0;
             foreach (IComponentPresentation cp in page.ComponentPresentations)
             {
                 cp.OrderOnPage = orderOnPage++;
             }
-            //Logger.Debug("GetIPageObject: about to load DCPs", LoggingCategory.Performance);
+            //Logger.LogDebug("GetIPageObject: about to load DCPs", LoggingCategory.Performance);
             //LoadComponentModelsFromComponentFactory(page);
-            //Logger.Debug("GetIPageObject: finished loading DCPs", LoggingCategory.Performance);
+            //Logger.LogDebug("GetIPageObject: finished loading DCPs", LoggingCategory.Performance);
 
-            //Logger.Debug("<<GetIPageObject(string length {0})", LoggingCategory.Performance, Convert.ToString(pageStringContent.Length));
+            //Logger.LogDebug("<<GetIPageObject(string length {0})", LoggingCategory.Performance, Convert.ToString(pageStringContent.Length));
             return page;
         }
         #endregion

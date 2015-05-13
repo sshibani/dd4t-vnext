@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0-*",
-  "dependencies": {
-    "DD4T.ContentModel.Contracts": ""
-  },
-  
+    "version": "1.0.0-*",
+    "dependencies": {
+        "DD4T.ContentModel.Contracts": "",
+        "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta4"
+    },
+
     "frameworks": {
         "dnx451": { }
-  }
+    }
 }
-  

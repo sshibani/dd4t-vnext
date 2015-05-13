@@ -1,5 +1,6 @@
 ﻿{
   "DD4TAppSettings": {
-    "PublicationId" :  "23"
+    "PublicationId": "23"
+    //"DefaultPage":  "sia.htm"
   }
 }
