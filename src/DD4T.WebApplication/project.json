@@ -11,9 +11,7 @@
     "Microsoft.Framework.Logging.Console": "1.0.0-beta4",
     "Microsoft.AspNet.Mvc": "6.0.0-beta4",
     "DD4T.Mvc": "1.0.0-*",
-    "DD4T.Providers.Mock": "",
-    "DD4T.Factories": "",
-    "DD4T.Utils": ""
+    "DD4T.Bootstrap": "1.0.0-*"
   },
 
   "commands": {

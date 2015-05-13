@@ -1,8 +1,5 @@
 ﻿using Microsoft.Framework.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Framework.ConfigurationModel;
 using DD4T.ContentModel.Contracts.Providers;
 using DD4T.Providers.Mock;
 using DD4T.ContentModel.Factories;
@@ -10,9 +7,9 @@ using DD4T.Factories;
 using DD4T.ContentModel.Contracts.Resolvers;
 using DD4T.Utils.Defaults;
 using DD4T.Utils;
-using Microsoft.Framework.ConfigurationModel;
 
-namespace DD4T.Mvc.DefaultBootstrap
+
+namespace DD4T.Bootstrap
 {
     public static class IServiceCollectionExtensions
     {

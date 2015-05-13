@@ -4,7 +4,7 @@ using Microsoft.AspNet.Routing;
 using System;
 using System.Threading.Tasks;
 
-namespace DD4T.Mvc
+namespace DD4T.Bootstrap
 {
     public class DD4TMiddleWare
     {

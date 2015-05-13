@@ -5,7 +5,7 @@ using Microsoft.AspNet.Routing;
 using System;
 using Microsoft.Framework.OptionsModel;
 
-namespace DD4T.Mvc.DefaultBootstrap
+namespace DD4T.Bootstrap
 {
     /// <summary>
     /// Configures the default route for DD4T and adds a constraint for favicon.ico

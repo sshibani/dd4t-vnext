@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DD4T.Mvc
+namespace DD4T.Bootstrap
 {
     /// <summary>
     /// Custom Route Constraint for ignoring requests to favicon.ico
