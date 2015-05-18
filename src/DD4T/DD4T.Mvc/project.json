@@ -9,7 +9,8 @@
     },
   
     "frameworks": {
-        "dnx451": { }
+        "dnx451": { },
+      "dnxcore5": {}
   }
 }
   

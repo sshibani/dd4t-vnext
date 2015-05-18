@@ -38,20 +38,20 @@ namespace DD4T.ContentModel
         public DateTime LastPublishedDate { get; set; }
 
         public PageTemplate PageTemplate { get; set; }
-        [XmlIgnore]
+         
         IPageTemplate IPage.PageTemplate
         {
             get { return PageTemplate; }
         }
 
         public Schema Schema { get; set; }
-        [XmlIgnore]
+         
         ISchema IPage.Schema
         {
             get { return Schema; }
         }
         public FieldSet MetadataFields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IPage.MetadataFields
         {
             get
@@ -60,20 +60,20 @@ namespace DD4T.ContentModel
             }
         }
         public List<ComponentPresentation> ComponentPresentations { get; set; }
-        [XmlIgnore]
+         
         IList<IComponentPresentation> IPage.ComponentPresentations
         {
             get { return ComponentPresentations.ToList<IComponentPresentation>(); }
         }
 
         public OrganizationalItem StructureGroup { get; set; }
-        [XmlIgnore]
+         
         IOrganizationalItem IPage.StructureGroup
         {
             get { return StructureGroup; }
         }
         public List<Category> Categories { get; set; }
-        [XmlIgnore]
+         
         IList<ICategory> IPage.Categories
         {
             get { return Categories.ToList<ICategory>(); }
@@ -84,21 +84,21 @@ namespace DD4T.ContentModel
 
     public class Keyword : RepositoryLocalItem, IKeyword
     {
-        [XmlAttribute]
+         
         public string Description { get; set; }
-        [XmlAttribute]
+         
         public string Key { get; set; }
-        [XmlAttribute]
+         
         public string TaxonomyId { get; set; }
-        [XmlAttribute]
+         
         public string Path { get; set; }
         private List<IKeyword> parentKeywords = new List<IKeyword>();
-        [XmlIgnore]
+         
         public IList<IKeyword> ParentKeywords { get { return parentKeywords; } }
 
 
         public FieldSet MetadataFields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IKeyword.MetadataFields
         {
             get { return MetadataFields != null ? (MetadataFields as IFieldSet) : null; }
@@ -113,23 +113,23 @@ namespace DD4T.ContentModel
     public class Category : RepositoryLocalItem, ICategory
     {
         public List<Keyword> Keywords { get; set; }
-        [XmlIgnore]
+         
         IList<IKeyword> ICategory.Keywords
         { get { return Keywords.ToList<IKeyword>(); } }
     }
 
     public class ComponentPresentation : IComponentPresentation
     {
-        [XmlIgnore]
+         
         public IPage Page { get; set; }
         public Component Component { get; set; }
-        [XmlIgnore]
+         
         IComponent IComponentPresentation.Component
         {
             get { return Component as IComponent; }
         }
         public ComponentTemplate ComponentTemplate { get; set; }
-        [XmlIgnore]
+         
         IComponentTemplate IComponentPresentation.ComponentTemplate
         {
             get { return ComponentTemplate as IComponentTemplate; }
@@ -137,12 +137,12 @@ namespace DD4T.ContentModel
         public string RenderedContent { get; set; }
         public bool IsDynamic { get; set; }
 
-        [XmlIgnore]
+         
         public int OrderOnPage { get; set; }
 
         public List<Condition> Conditions { get; set; }
 
-        [XmlIgnore]
+         
         IList<ICondition> IComponentPresentation.Conditions
         {
             get { return Conditions.ToList<ICondition>(); }
@@ -154,7 +154,7 @@ namespace DD4T.ContentModel
         public string FileExtension { get; set; }
         public DateTime RevisionDate { get; set; }
         public FieldSet MetadataFields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IPageTemplate.MetadataFields
         {
             get
@@ -163,7 +163,7 @@ namespace DD4T.ContentModel
             }
         }
         public OrganizationalItem Folder { get; set; }
-        [XmlIgnore]
+         
         IOrganizationalItem IPageTemplate.Folder
         {
             get { return Folder as IOrganizationalItem; }
@@ -175,7 +175,7 @@ namespace DD4T.ContentModel
         public string OutputFormat { get; set; }
         public DateTime RevisionDate { get; set; }
         public FieldSet MetadataFields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IComponentTemplate.MetadataFields
         {
             get
@@ -184,7 +184,7 @@ namespace DD4T.ContentModel
             }
         }
         public OrganizationalItem Folder { get; set; }
-        [XmlIgnore]
+         
         IOrganizationalItem IComponentTemplate.Folder
         {
             get { return Folder as IOrganizationalItem; }
@@ -198,39 +198,39 @@ namespace DD4T.ContentModel
         public DateTime LastPublishedDate { get; set; }
         public DateTime RevisionDate { get; set; }
         public Schema Schema { get; set; }
-        [XmlIgnore]
+         
         ISchema IComponent.Schema
         {
             get { return Schema; }
         }
 
         public FieldSet Fields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IComponent.Fields
         {
             get { return Fields != null ? (Fields as IFieldSet) : null; }
         }
         public FieldSet MetadataFields { get; set; }
-        [XmlIgnore]
+         
         IFieldSet IComponent.MetadataFields
         {
             get { return MetadataFields != null ? (MetadataFields as IFieldSet) : null; }
         }
         public ComponentType ComponentType { get; set; }
         public Multimedia Multimedia { get; set; }
-        [XmlIgnore]
+         
         IMultimedia IComponent.Multimedia
         {
             get { return Multimedia as IMultimedia; }
         }
         public OrganizationalItem Folder { get; set; }
-        [XmlIgnore]
+         
         IOrganizationalItem IComponent.Folder
         {
             get { return Folder as IOrganizationalItem; }
         }
         public List<Category> Categories { get; set; }
-        [XmlIgnore]
+         
         IList<ICategory> IComponent.Categories
         {
             get { return Categories.ToList<ICategory>(); } //as IList<ICategory>; 
@@ -253,7 +253,7 @@ namespace DD4T.ContentModel
     public class Schema : RepositoryLocalItem, ISchema
     {
         public OrganizationalItem Folder { get; set; }
-        [XmlIgnore]
+         
         IOrganizationalItem ISchema.Folder
         {
             get { return Folder as IOrganizationalItem; }
@@ -267,9 +267,7 @@ namespace DD4T.ContentModel
     }
     public enum MergeAction { Replace, Merge, MergeMultiValueSkipSingleValue, MergeMultiValueReplaceSingleValue, Skip }
 
-#if DNX451  
-    [Serializable]
-#endif
+
     public class FieldSet : Dictionary<string, IField> //SerializableDictionary<string, IField, Field>, IFieldSet, IXmlSerializable
     {
         public FieldSet()
@@ -303,7 +301,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         IList<string> IField.Values
         {
             get { return Values as IList<string>; }
@@ -313,7 +311,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         IList<double> IField.NumericValues
         {
             get { return NumericValues as IList<double>; }
@@ -323,7 +321,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         IList<DateTime> IField.DateTimeValues
         {
             get { return DateTimeValues as IList<DateTime>; }
@@ -333,7 +331,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         IList<IComponent> IField.LinkedComponentValues
         {
             get { return LinkedComponentValues.ToList<IComponent>(); }
@@ -343,7 +341,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         IList<IFieldSet> IField.EmbeddedValues
         {
             get
@@ -358,7 +356,7 @@ namespace DD4T.ContentModel
             get;
             set;
         }
-        [XmlIgnore]
+         
         ISchema IField.EmbeddedSchema
         {
             get
@@ -368,28 +366,28 @@ namespace DD4T.ContentModel
         }
 
 
-        [XmlAttribute]
+         
         public FieldType FieldType
         {
             get;
             set;
         }
 
-        [XmlAttribute]
+         
         public string CategoryName
         {
             get;
             set;
         }
 
-        [XmlAttribute]
+         
         public string CategoryId
         {
             get;
             set;
         }
 
-        [XmlAttribute]
+         
         public string XPath
         {
             get;
@@ -408,19 +406,19 @@ namespace DD4T.ContentModel
             }
         }
 
-        [XmlIgnore]
+         
         public List<Keyword> KeywordValues
         {
             get;
             set;
         }
 
-        [XmlIgnore]
+         
         IList<IKeyword> IField.Keywords
         {
             get { return KeywordValues.ToList<IKeyword>(); }
         }
-        [XmlIgnore]
+         
         IList<IKeyword> IField.KeywordValues
         {
             get { return KeywordValues.ToList<IKeyword>(); }
@@ -448,13 +446,13 @@ namespace DD4T.ContentModel
     {
         public string PublicationId { get; set; }
         public Publication Publication { get; set; }
-        [XmlIgnore]
+         
         IPublication IRepositoryLocal.Publication
         {
             get { return Publication; }
         }
         public Publication OwningPublication { get; set; }
-        [XmlIgnore]
+         
         IPublication IRepositoryLocal.OwningPublication
         {
             get { return OwningPublication; }
@@ -614,7 +612,7 @@ namespace DD4T.ContentModel
 
         public List<Condition> Conditions { get; set; }
 
-        [XmlIgnore]
+         
         IList<ICondition> ITargetGroup.Conditions { get { return Conditions.ToList<ICondition>(); } }
     }
 

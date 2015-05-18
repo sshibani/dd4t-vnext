@@ -11,11 +11,8 @@
   },
 
   "frameworks": {
-    "dnx451": {
-      "frameworkAssemblies": {
-        "System.Xml": ""
-      }
-    }
+    "dnx451": { },
+    "dnxcore5": {}
   }
 }
   

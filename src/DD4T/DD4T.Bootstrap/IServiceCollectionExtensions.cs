@@ -7,7 +7,8 @@ using DD4T.Factories;
 using DD4T.ContentModel.Contracts.Resolvers;
 using DD4T.Utils.Defaults;
 using DD4T.Utils;
-
+using Newtonsoft.Json;
+using DD4T.ContentModel.Contracts.Configuration;
 
 namespace DD4T.Bootstrap
 {
@@ -19,9 +20,12 @@ namespace DD4T.Bootstrap
             var configuration = new Configuration()
                 .AddJsonFile("config.json")
                 .AddEnvironmentVariables();
-            
 
+            //var config = JsonConvert.DeserializeObject<DD4TConfiguration>()
+            //var x = configuration.GetSubKey("DD4TAppSettings");
+            
             services.Configure<DD4TConfiguration>(configuration.GetSubKey("DD4TAppSettings"));
+
             services.AddTransient<IPageProvider, TridionPageProvider>();
             services.AddTransient<IPageFactory, PageFactory>();
             services.AddSingleton<IPublicationResolver, DefaultPublicationResolver>();

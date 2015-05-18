@@ -1,4 +1,5 @@
-﻿using DD4T.ContentModel.Contracts.Providers;
+﻿using DD4T.ContentModel.Contracts.Configuration;
+using DD4T.ContentModel.Contracts.Providers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DD4T.Utils
 {
-    public class DD4TConfiguration
+    public class DD4TConfiguration : IDD4TConfiguration
     {
 
         public int PublicationId { get; set; }

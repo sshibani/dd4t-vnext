@@ -104,7 +104,7 @@ namespace DD4T.Mvc.Controllers
             if (model == null)
                 throw new Exception("Page cannot be found");
 
-            //Todo: fix me
+            //Todo: fix megit 
             //ViewBag.Renderer = ComponentPresentationRenderer;
             view.ViewData.Model = model;
             return view;
