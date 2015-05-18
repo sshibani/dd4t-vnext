@@ -95,8 +95,7 @@ namespace DD4T.Mvc.Controllers
         {
             var view = GetViewAsync();
             var x = view.ViewEngine.FindPartialView(ActionContext, view.ViewName);
-       
-
+            
             var model = await GetModelForPageAsync<HomePage>(pageUrl);
             //IPage model = await GetModelForPageAsync(pageUrl);
             if (model == null)
