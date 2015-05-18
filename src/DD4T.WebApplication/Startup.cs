@@ -17,7 +17,14 @@ namespace DD4T.WebApplication
         {
             app.UseMvc();
             app.UseDD4T();
-           
+
+            //app.UseMvc(r => r.MapRoute(
+            //        name: "TridionPage",
+            //        template: "{*PageUrl}",
+            //        defaults: new { controller = "Page", action = "PageAsyncFor" }
+            //        )
+            //);
+
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");

@@ -6,16 +6,14 @@
     "System.Linq": "4.0.0-beta-22911",
     "System.Text.RegularExpressions": "4.0.10-beta-22911",
     "System.Runtime.Serialization.Xml": "4.0.10-beta-22911",
-    "System.Runtime.Extensions": "4.0.10-beta-22911"
+    "System.Runtime.Extensions": "4.0.10-beta-22911",
+    "System.Xml.ReaderWriter": "4.0.10-beta-22911"
   },
 
   "frameworks": {
     "dnx451": {
-       "frameworkAssemblies": {
+      "frameworkAssemblies": {
         "System.Xml": ""
-      },
-      "dependencies": {
-        "System.Xml.ReaderWriter": "4.0.10-beta-22911"
       }
     }
   }

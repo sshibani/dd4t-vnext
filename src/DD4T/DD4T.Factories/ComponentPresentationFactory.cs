@@ -7,16 +7,17 @@ using DD4T.ContentModel;
 using DD4T.ContentModel.Contracts.Providers;
 using Microsoft.Framework.Logging;
 using Newtonsoft.Json;
+using Microsoft.Framework.OptionsModel;
+using DD4T.Utils;
 
 namespace DD4T.Factories
 {
     public class ComponentPresentationFactory : FactoryBase, IComponentPresentationFactory
     {
         private readonly IComponentPresentationProvider ComponentPresentationProvider;
-        // private readonly INewComponentPresentationProvider ComponentPresentationProvider;
 
-        public ComponentPresentationFactory(IComponentPresentationProvider componentPresentationProvider, ILoggerFactory loggerfactory)
-            : base(componentPresentationProvider, loggerfactory)
+        public ComponentPresentationFactory(IComponentPresentationProvider componentPresentationProvider, ILoggerFactory loggerfactory, IOptions<DD4TConfiguration> config)
+            : base(componentPresentationProvider, loggerfactory, config)
         {
             ComponentPresentationProvider = componentPresentationProvider;
         }

@@ -49,5 +49,20 @@ namespace DD4T.Utils
 
         }
 
+        private bool includeLastPublishedDate = false;
+        public bool IncludeLastPublishedDate
+        {
+            get
+            {
+                return includeLastPublishedDate;
+            }
+
+            set
+            {
+                includeLastPublishedDate = value;
+            }
+        }
+
+
     }
 }

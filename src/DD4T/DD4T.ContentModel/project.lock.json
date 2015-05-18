@@ -8,10 +8,10 @@
       "System.Linq >= 4.0.0-beta-22911",
       "System.Text.RegularExpressions >= 4.0.10-beta-22911",
       "System.Runtime.Serialization.Xml >= 4.0.10-beta-22911",
-      "System.Runtime.Extensions >= 4.0.10-beta-22911"
+      "System.Runtime.Extensions >= 4.0.10-beta-22911",
+      "System.Xml.ReaderWriter >= 4.0.10-beta-22911"
     ],
     "DNX,Version=v4.5.1": [
-      "System.Xml.ReaderWriter >= 4.0.10-beta-22911",
       "framework/System.Xml "
     ]
   },
@@ -27,6 +27,18 @@
           "frameworkAssemblies": [],
           "runtimeAssemblies": [],
           "compileAssemblies": []
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22231"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Collections.dll"
+          ]
         }
       },
       "files": [
@@ -51,6 +63,20 @@
           "frameworkAssemblies": [],
           "runtimeAssemblies": [],
           "compileAssemblies": []
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22231",
+            "System.Text.Encoding": "4.0.0-beta-22231",
+            "System.Threading.Tasks": "4.0.0-beta-22231"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.IO.dll"
+          ]
         }
       },
       "files": [
@@ -78,6 +104,19 @@
           "compileAssemblies": [
             "lib/net45/System.Linq.dll"
           ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Collections": "4.0.0-beta-22911",
+            "System.Runtime": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Linq.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Linq.dll"
+          ]
         }
       },
       "files": [
@@ -103,6 +142,16 @@
           ],
           "compileAssemblies": [
             "lib/net45/System.Runtime.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {},
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Runtime.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Runtime.dll"
           ]
         }
       },
@@ -132,6 +181,18 @@
           "compileAssemblies": [
             "lib/net45/System.Runtime.Extensions.dll"
           ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Runtime.Extensions.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Runtime.Extensions.dll"
+          ]
         }
       },
       "files": [
@@ -159,6 +220,18 @@
           ],
           "compileAssemblies": [
             "lib/net45/System.Runtime.Serialization.Primitives.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Runtime.Serialization.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Runtime.Serialization.Primitives.dll"
           ]
         }
       },
@@ -192,6 +265,22 @@
           "compileAssemblies": [
             "lib/net45/System.Runtime.Serialization.Xml.dll"
           ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.0-beta-22911",
+            "System.Runtime": "4.0.0-beta-22911",
+            "System.Runtime.Serialization.Primitives": "4.0.10-beta-22911",
+            "System.Text.Encoding": "4.0.0-beta-22911",
+            "System.Xml.ReaderWriter": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Runtime.Serialization.Xml.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Runtime.Serialization.Xml.dll"
+          ]
         }
       },
       "files": [
@@ -216,6 +305,18 @@
           "frameworkAssemblies": [],
           "runtimeAssemblies": [],
           "compileAssemblies": []
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22231"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Text.Encoding.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Text.Encoding.dll"
+          ]
         }
       },
       "files": [
@@ -241,6 +342,18 @@
           ],
           "compileAssemblies": [
             "lib/net45/System.Text.RegularExpressions.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Text.RegularExpressions.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Text.RegularExpressions.dll"
           ]
         }
       },
@@ -269,6 +382,18 @@
           ],
           "compileAssemblies": [
             "lib/net45/System.Threading.Tasks.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Threading.Tasks.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Threading.Tasks.dll"
           ]
         }
       },
@@ -301,6 +426,21 @@
           "compileAssemblies": [
             "lib/net45/System.Xml.ReaderWriter.dll"
           ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.0-beta-22911",
+            "System.Runtime": "4.0.0-beta-22911",
+            "System.Text.Encoding": "4.0.0-beta-22911",
+            "System.Threading.Tasks": "4.0.0-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Xml.ReaderWriter.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Xml.ReaderWriter.dll"
+          ]
         }
       },
       "files": [
@@ -330,6 +470,20 @@
           ],
           "compileAssemblies": [
             "lib/net45/System.Xml.XmlSerializer.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.0-beta-22911",
+            "System.Runtime": "4.0.0-beta-22911",
+            "System.Xml.ReaderWriter": "4.0.10-beta-22911"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Xml.XmlSerializer.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Xml.XmlSerializer.dll"
           ]
         }
       },

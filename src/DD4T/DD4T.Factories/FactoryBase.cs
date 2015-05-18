@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Framework.Logging;
+using Microsoft.Framework.OptionsModel;
+using DD4T.Utils;
 
 namespace DD4T.Factories
 {
@@ -13,32 +15,21 @@ namespace DD4T.Factories
     {
         protected IProvider Provider;
         protected readonly ILogger Logger;
+        protected readonly DD4TConfiguration Configuration;
         #region ctor 
-        public FactoryBase(IProvider provider, ILoggerFactory loggerfactory)
+        public FactoryBase(IProvider provider, ILoggerFactory loggerfactory, IOptions<DD4TConfiguration> config)
         {
             Logger = loggerfactory.CreateLogger(typeof(FactoryBase).FullName);
+            if (config.Options == null)
+                throw new ArgumentException("configuration");
+            
             if (provider == null)
                 throw new ArgumentNullException("provider");
 
+            Configuration = config.Options;
             Provider = provider;
         }
         #endregion
-
-        //private ILogger logger = null;
-        //public ILogger Logger
-        //{
-        //    get
-        //    {
-        //        if (logger == null)
-        //            logger = NullLogger.Create();
-
-        //        return logger;
-        //    }
-        //    set
-        //    {
-        //        logger = value;
-        //    }
-        //}
 
         #region publication resolving
         private int? _publicationId = null;
@@ -99,9 +90,7 @@ namespace DD4T.Factories
         {
             get
             {
-                //Todo: Fix Me
-                //return Configuration.IncludeLastPublishedDate;
-                return true;
+                return Configuration.IncludeLastPublishedDate;
             }
         }
         #endregion

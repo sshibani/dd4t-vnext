@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Routing;
-using System;
 using System.Threading.Tasks;
 
 namespace DD4T.Bootstrap

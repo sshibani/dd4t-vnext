@@ -267,7 +267,9 @@ namespace DD4T.ContentModel
     }
     public enum MergeAction { Replace, Merge, MergeMultiValueSkipSingleValue, MergeMultiValueReplaceSingleValue, Skip }
 
+#if DNX451
     [Serializable]
+#endif
     public class FieldSet : SerializableDictionary<string, IField, Field>, IFieldSet, IXmlSerializable
     {
         public FieldSet()

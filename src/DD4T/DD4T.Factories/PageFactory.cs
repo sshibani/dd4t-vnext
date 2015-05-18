@@ -7,6 +7,8 @@ using DD4T.ContentModel;
 using DD4T.ContentModel.Contracts.Providers;
 using Newtonsoft.Json;
 using Microsoft.Framework.Logging;
+using Microsoft.Framework.OptionsModel;
+using DD4T.Utils;
 
 namespace DD4T.Factories
 {
@@ -15,8 +17,8 @@ namespace DD4T.Factories
         private readonly IPageProvider PageProvider;
        // private readonly INewComponentPresentationProvider ComponentPresentationProvider;
 
-        public PageFactory(IPageProvider pageProvider, ILoggerFactory loggerfactory)
-            : base(pageProvider, loggerfactory)
+        public PageFactory(IPageProvider pageProvider, ILoggerFactory loggerfactory, IOptions<DD4TConfiguration> config)
+            : base(pageProvider, loggerfactory, config)
         {
             PageProvider = pageProvider;
         }
@@ -32,7 +34,31 @@ namespace DD4T.Factories
             return await GetIPageObject(pageContentFromBroker);
         }
 
-      
+        public async Task<T> GetPage<T>(string pageUrl)
+        {
+            string pageContentFromBroker = await PageProvider.GetContentByUrl(pageUrl);
+
+            if (string.IsNullOrEmpty(pageContentFromBroker))
+                return default(T);
+
+            //Create an IPage object from the stringcontent
+            return await GetIPageObject<T>(pageContentFromBroker);
+        }
+
+
+
+        public async Task<T> GetIPageObject<T>(string pageStringContent)
+        {
+            // IPage page;
+            var current = Activator.CreateInstance<T>();
+
+            JsonSerializerSettings s = new JsonSerializerSettings { };
+            s.Converters.Add(new FieldConverter());
+            //page = await JsonConvert.DeserializeObjectAsync<Page>(pageStringContent, s);
+            current = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<T>(pageStringContent, s));
+
+            return current;
+        }
 
         #region Private Helpers
         public async Task<IPage> GetIPageObject(string pageStringContent)

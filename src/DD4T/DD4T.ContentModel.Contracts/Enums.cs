@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace DD4T.ContentModel
+﻿namespace DD4T.ContentModel
 {
     public enum ComponentType { Multimedia, Normal }
     public enum FieldType { Text, MultiLineText, Xhtml, Keyword, Embedded, MultiMediaLink, ComponentLink, ExternalLink, Number, Date }
