@@ -94,8 +94,11 @@ namespace DD4T.Mvc.Controllers
         public async virtual Task<IActionResult> PageAsyncFor(string pageUrl)
         {
             var view = GetViewAsync();
-            var x = view.ViewEngine.FindPartialView(ActionContext, view.ViewName);
             
+            var ViewEngine = (ICompositeViewEngine)ActionContext.HttpContext.RequestServices.GetService(typeof(ICompositeViewEngine));
+
+            var v = ViewEngine.FindPartialView(ActionContext, "Strongly");
+
             var model = await GetModelForPageAsync<HomePage>(pageUrl);
             //IPage model = await GetModelForPageAsync(pageUrl);
             if (model == null)
