@@ -1,5 +1,5 @@
-﻿{
-    "projects": [ "src", "src/DD4T", "test" ],
+{
+    "projects": [ "src", "src/DD4T", "test", "../DVM4T" ],
     "sdk": {
         "version": "1.0.0-beta4"
     }
