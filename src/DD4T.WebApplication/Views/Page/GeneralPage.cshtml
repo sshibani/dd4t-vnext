@@ -14,7 +14,8 @@
 
     @foreach(var cp in Model.ComponentPresentations)
     {
-        @Component.Invoke("ComponentPresentation", cp)
+        @*@Component.InvokeAsync("ComponentPresentation", cp)*@
+        @await Component.InvokeAsync("ComponentPresentation", cp)
     }
 </body>
 </html>
