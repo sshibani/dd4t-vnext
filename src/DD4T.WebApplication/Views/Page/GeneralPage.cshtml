@@ -1,4 +1,4 @@
-﻿@model DD4T.ContentModel.IPage
+﻿@model DD4T.WebApplication.Models.GeneralPage
 @*@addTagHelper "DD4T.Mvc.ComponentPresentationTagHelper, DD4T.Mvc"*@
 @{
     // ViewBag.Title = "Home Page";
@@ -9,12 +9,19 @@
 </head>
 <body>
     <h2>TridionPageController</h2>
-    <h3>@Model.Title</h3>
-    Found @Model.ComponentPresentations.Count Component presentations... not showing them right now... don't feel like it
-
-    @foreach(var cp in Model.ComponentPresentations)
+    @*<h3>@Model.Title</h3>
+    Found @Model.ComponentPresentations.Count Component presentations... not showing them right now... don't feel like it*@
+    
+    @foreach(var article in Model.Article)
     {
-        @Component.Invoke("ComponentPresentation", cp)
+        
+        @Component.Invoke("Article", article)
+    }
+
+
+    @foreach(var prod in Model.Product)
+    {
+        @Component.Invoke("Product", prod)
     }
 </body>
 </html>

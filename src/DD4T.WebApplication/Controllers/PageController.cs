@@ -54,7 +54,7 @@ namespace DD4T.WebApplication.Controllers
             return View("Strongly");
         }
 
-        protected virtual ViewResult GetViewAsync(IPage page)
+        protected virtual string GetViewAsync(IPage page)
         {
             string viewName;
             if (page.PageTemplate.MetadataFields == null || !page.PageTemplate.MetadataFields.ContainsKey("view"))
@@ -66,7 +66,7 @@ namespace DD4T.WebApplication.Controllers
             {
                 throw new ConfigurationException("No view configured for page template " + page.PageTemplate.Id);
             }
-            return View(viewName, page);
+            return viewName;
         }
 
 
@@ -94,11 +94,12 @@ namespace DD4T.WebApplication.Controllers
            
             ViewModelDefaults.Factory.LoadViewModels(Assembly.GetAssembly(this.GetType()));
             var pageModel = ViewModelDefaults.Factory.BuildViewModel(pDataObject);
-            return View("CP", pageModel);
+            //return View("CP", pageModel);
 
+            var viewName = GetViewAsync(model);
             //Todo: fix me
             //ViewBag.Renderer = ComponentPresentationRenderer;
-            return GetViewAsync(model);
+            return View(viewName, pageModel);
         }
 
         public async virtual Task<IActionResult> PageAsyncFor(string pageUrl)

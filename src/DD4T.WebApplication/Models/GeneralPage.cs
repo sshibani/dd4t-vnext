@@ -13,8 +13,9 @@ namespace DD4T.WebApplication.Models
     public class GeneralPage : ViewModelBase
     {
 
-
-
+        [PresentationsByView(ViewPrefix = "Product")]
+        public List<Product> Product { get; set; }
+        
         [PresentationsByView(ViewPrefix = "Article")]
         public List<Article> Article { get; set; }
     }
