@@ -1,4 +1,5 @@
-﻿
+﻿@model DD4T.ContentModel.IPage
+@addTagHelper "DD4T.Mvc.ComponentPresentationTagHelper, DD4T.Mvc"
 @{
     // ViewBag.Title = "Home Page";
 }
@@ -10,5 +11,10 @@
     <h2>TridionPageController</h2>
     <h3>@Model.Title</h3>
     Found @Model.ComponentPresentations.Count Component presentations... not showing them right now... don't feel like it
+
+    @foreach(var cp in Model.ComponentPresentations)
+    {
+        <cp templateId="@cp.ComponentTemplate.Id" componentId="@cp.Component.Id" />
+    }
 </body>
 </html>

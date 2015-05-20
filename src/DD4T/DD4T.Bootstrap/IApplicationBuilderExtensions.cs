@@ -32,7 +32,8 @@ namespace DD4T.Bootstrap
             dd4tRoute.MapRoute(
                     name: "TridionPage",
                     template: "{*PageUrl:faviconIgnoreConstraint}",
-                    defaults: new { controller = "Page", action = "PageAsync" }                   
+                    //defaults: new { controller = "Page", action = "PageAsync" }
+                    defaults: new { controller = "ComponentPresentation", action = "CP" }                   
                     );
                         
 

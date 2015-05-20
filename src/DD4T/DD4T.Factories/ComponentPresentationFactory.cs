@@ -22,9 +22,15 @@ namespace DD4T.Factories
             ComponentPresentationProvider = componentPresentationProvider;
         }
 
-        public Task<IComponentPresentation> GetComponentPresentation(string componentUri, string componentTemplateUri = "")
+        public async Task<IComponentPresentation> GetComponentPresentation(string componentUri, string componentTemplateUri = "")
         {
-            throw new NotImplementedException();
+            string cpContentFromBroker = await ComponentPresentationProvider.GetComponentPresentationContent(componentUri, componentTemplateUri);
+
+            if (string.IsNullOrEmpty(cpContentFromBroker))
+                return null;
+
+            //Create an IPage object from the stringcontent
+            return await GetComponentPresentation<ComponentPresentation>(cpContentFromBroker);
         }
 
         public async Task<T> GetComponentPresentation<T>(string componentUri, string componentTemplateUri = "")

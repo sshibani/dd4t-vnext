@@ -208,6 +208,7 @@ namespace DD4T.ContentModel
          
         IFieldSet IComponent.Fields
         {
+            //get { return Fields != null ? (Fields as IFieldSet) : null; }
             get { return Fields != null ? (Fields as IFieldSet) : null; }
         }
         public FieldSet MetadataFields { get; set; }
@@ -268,7 +269,7 @@ namespace DD4T.ContentModel
     public enum MergeAction { Replace, Merge, MergeMultiValueSkipSingleValue, MergeMultiValueReplaceSingleValue, Skip }
 
 
-    public class FieldSet : Dictionary<string, IField> //SerializableDictionary<string, IField, Field>, IFieldSet, IXmlSerializable
+    public class FieldSet : Dictionary<string, IField>, IFieldSet //SerializableDictionary<string, IField, Field>, IFieldSet, IXmlSerializable
     {
         public FieldSet()
             : base()

@@ -11,7 +11,9 @@
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta4",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta4",
       "DD4T.Mvc >= 1.0.0-*",
-      "DD4T.Bootstrap >= 1.0.0-*"
+      "DD4T.Bootstrap ",
+      "DVM4T.Core >= 1.3.0-*",
+      "DVM4T.DD4T >= 1.3.0-*"
     ],
     "DNX,Version=v4.5.1": []
   },
