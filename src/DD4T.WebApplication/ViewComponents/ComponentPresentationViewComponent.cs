@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace DD4T.WebApplication.ViewComponents
 {
+    [ViewComponent(Name = "ComponentPresentation")]
     public class ComponentPresentationViewComponent : ViewComponent
     {
 

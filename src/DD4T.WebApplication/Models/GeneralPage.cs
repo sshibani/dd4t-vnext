@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 
 namespace DD4T.WebApplication.Models
 {
-    [ViewModel("ContentQuery", true, ViewModelKeys = new string[] { "ContentQuery"  })]
-    public class ContentQuery : ViewModelBase
-    {
-        [TextField()]
-        public string Headline { get; set; }   
 
+    [PageViewModel(new [] { "GeneralPage" })]
+    public class GeneralPage : ViewModelBase
+    {
+
+
+
+        [PresentationsByView(ViewPrefix = "Article")]
+        public List<Article> Article { get; set; }
     }
 }

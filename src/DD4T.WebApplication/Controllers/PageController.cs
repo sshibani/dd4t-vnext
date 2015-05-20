@@ -8,6 +8,9 @@ using Microsoft.Framework.Logging;
 using Microsoft.AspNet.Mvc.Rendering;
 using DD4T.Mvc.Controllers;
 using DD4T.WebApplication.Models;
+using DVM4T.Core;
+using DVM4T.Contracts;
+using System.Reflection;
 
 namespace DD4T.WebApplication.Controllers
 {
@@ -86,6 +89,13 @@ namespace DD4T.WebApplication.Controllers
             if (model == null)
                 throw new Exception("Page cannot be found");
 
+
+            IPageData pDataObject = new DVM4T.DD4T.Page(model);
+           
+            ViewModelDefaults.Factory.LoadViewModels(Assembly.GetAssembly(this.GetType()));
+            var pageModel = ViewModelDefaults.Factory.BuildViewModel(pDataObject);
+            return View("CP", pageModel);
+
             //Todo: fix me
             //ViewBag.Renderer = ComponentPresentationRenderer;
             return GetViewAsync(model);
@@ -99,7 +109,7 @@ namespace DD4T.WebApplication.Controllers
 
             var v = ViewEngine.FindPartialView(ActionContext, "Strongly");
 
-            var model = await GetModelForPageAsync<HomePage>(pageUrl);
+            var model = await GetModelForPageAsync<GeneralPage>(pageUrl);
             //IPage model = await GetModelForPageAsync(pageUrl);
             if (model == null)
                 throw new Exception("Page cannot be found");
