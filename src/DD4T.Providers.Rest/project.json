@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "DD4T.ContentModel.Contracts": "",
+    "DD4T.Core.Contracts": ""
+
+  },
+
+  "frameworks": {
+    "dnx46": {
+      "dependencies": {
+            "Microsoft.Net.Http": "2.2.22"
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.10-beta-22816",
+        "System.Linq": "4.0.0-beta-22816",
+        "System.Threading": "4.0.10-beta-22816",
+        "Microsoft.CSharp": "4.0.0-beta-22816",
+        "System.Net.Http": "4.0.0-beta-23029"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "DD4T.ContentModel.Contracts": "",
+    "DD4T.ContentModel": "",
+    "Newtonsoft.Json": "6.0.6"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

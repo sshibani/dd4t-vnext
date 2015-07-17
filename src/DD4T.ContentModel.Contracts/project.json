@@ -1,0 +1,16 @@
+{
+  "version": "2.1.0-*",
+  "description": "",
+  "authors": [ "" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+  },
+
+  "frameworks" : {
+    "dnx451": { }
+    }
+
+}

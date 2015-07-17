@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0-*",
+    "dependencies": {
+      "Microsoft.AspNet.Mvc": "6.0.0-beta4",
+      "Microsoft.Framework.OptionsModel": "1.0.0-beta4",
+      "DD4T.ContentModel": "",
+      "DD4T.Factories": "",
+      "DD4T.Utils": ""
+    },
+  
+    "frameworks": {
+        "dnx451": { }
+  }
+}
+  

@@ -1,0 +1,12 @@
+{
+  "locked": false,
+  "version": -9998,
+  "projectFileDependencyGroups": {
+    "": [
+      "DD4T.ContentModel.Contracts ",
+      "DD4T.ContentModel "
+    ],
+    "DNX,Version=v4.5.1": []
+  },
+  "libraries": {}
+}
