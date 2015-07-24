@@ -42,7 +42,8 @@ namespace DD4T.Providers.Mock
 
         public string GetContent(string uri, string templateUri = "")
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return "{}";
         }
 
         public List<string> GetContentMultiple(string[] componentUris)

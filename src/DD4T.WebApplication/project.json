@@ -3,13 +3,18 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "Kestrel"  : "1.0.0-beta5",
+    "Kestrel": "1.0.0-beta5",
+    "Microsoft.AspNet.Hosting": "1.0.0-beta5",
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5",
     "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta5",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta5",
     "DD4T.Bootstrap": ""
   },
 
   "commands": {
-    "kestrel" : "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004"
+    "web": "Microsoft.AspNet.Hosting server.name=Microsoft.AspNet.Server.WebListener server.urls=http://localhost:5001",
+    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004"
   },
 
   "frameworks": {

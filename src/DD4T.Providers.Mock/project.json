@@ -1,8 +1,7 @@
 {
   "version": "1.0.0-*",
   "dependencies": {
-    "DD4T.Core.Contracts": "",
-    "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta5"
+    "DD4T.Core.Contracts": ""
   },
 
   "frameworks": {

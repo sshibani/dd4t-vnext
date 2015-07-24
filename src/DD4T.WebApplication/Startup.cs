@@ -6,6 +6,8 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
 using DD4T.Bootstrap;
+using Microsoft.AspNet.Diagnostics;
+using Microsoft.AspNet.Hosting;
 
 namespace DD4T.WebApplication
 {
@@ -15,7 +17,7 @@ namespace DD4T.WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDD4T();
+            services.AddDD4T();            
         }
 
         public void Configure(IApplicationBuilder app)

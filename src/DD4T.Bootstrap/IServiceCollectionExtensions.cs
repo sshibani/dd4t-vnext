@@ -1,5 +1,4 @@
 ﻿using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.ConfigurationModel;
 using DD4T.ContentModel.Contracts.Providers;
 using DD4T.ContentModel.Factories;
 using DD4T.Factories;
@@ -12,6 +11,8 @@ using DD4T.Utils.Caching;
 using DD4T.Providers.Mock;
 using DD4T.ContentModel.Contracts.Configuration;
 using DD4T.Utils;
+using DD4T.ContentModel.Contracts.Serializing;
+using DD4T.Serialization;
 
 namespace DD4T.Bootstrap
 {
@@ -20,9 +21,9 @@ namespace DD4T.Bootstrap
 
         public static void AddDD4T(this IServiceCollection services)
         {
-           //var configuration = new Configuration()
-           //     .AddJsonFile("config.json")
-           //     .AddEnvironmentVariables();
+            //var configuration = new Configuration()
+            //     .AddJsonFile("config.json")
+            //     .AddEnvironmentVariables();
 
             //var config = JsonConvert.DeserializeObject<DD4TConfiguration>()
             //var x = configuration.GetSubKey("DD4TAppSettings");
@@ -33,9 +34,12 @@ namespace DD4T.Bootstrap
             services.AddSingleton<IDD4TConfiguration, DD4TConfiguration>();
             //services.Configure<DD4TConfiguration>(configuration.GetSubKey("DD4TAppSettings"));
 
+            services.AddTransient<ISerializerService, JSONSerializerService>();
+
             services.AddTransient<IPageProvider, TridionPageProvider>();
             services.AddTransient<IComponentPresentationProvider, ComponentPresentationProvider>();
             services.AddTransient<ILinkProvider, LinkProvider>();
+           
 
 
 
@@ -45,6 +49,7 @@ namespace DD4T.Bootstrap
             services.AddTransient<IComponentPresentationFactory, ComponentPresentationFactory>();
             services.AddTransient<IBinaryFactory, BinaryFactory>();
             services.AddTransient<ILinkFactory, LinkFactory>();
+            services.AddTransient<IFactoriesFacade, FactoriesFacade>();
 
         
         }

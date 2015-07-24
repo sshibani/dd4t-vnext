@@ -3,7 +3,6 @@
   "dependencies": {
     "DD4T.ContentModel.Contracts": "",
     "DD4T.Core.Contracts": "",
-    "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta5",
     "Microsoft.Framework.OptionsModel": "1.0.0-beta5" 
   },
   

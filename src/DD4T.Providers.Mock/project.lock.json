@@ -2,46 +2,12 @@
   "locked": false,
   "version": -9996,
   "targets": {
-    "DNX,Version=v4.5.1": {
-      "Microsoft.Framework.Logging.Interfaces/1.0.0-beta5-11241": {
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.Logging.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.Logging.Interfaces.dll": {}
-        }
-      }
-    }
+    "DNX,Version=v4.5.1": {}
   },
-  "libraries": {
-    "Microsoft.Framework.Logging.Interfaces/1.0.0-beta5-11241": {
-      "serviceable": true,
-      "sha512": "blTzq5D7gQ99ySVC/2hdxxySlzvULHET2EbhRxhHQe8frm9TesM51L1qolSgOW7NdpiG1n4rqou221NEDKNFuQ==",
-      "files": [
-        "Microsoft.Framework.Logging.Interfaces.1.0.0-beta5-11241.nupkg",
-        "Microsoft.Framework.Logging.Interfaces.1.0.0-beta5-11241.nupkg.sha512",
-        "Microsoft.Framework.Logging.Interfaces.nuspec",
-        "lib/dnx451/Microsoft.Framework.Logging.Interfaces.dll",
-        "lib/dnx451/Microsoft.Framework.Logging.Interfaces.xml",
-        "lib/dnxcore50/Microsoft.Framework.Logging.Interfaces.dll",
-        "lib/dnxcore50/Microsoft.Framework.Logging.Interfaces.xml",
-        "lib/net45/Microsoft.Framework.Logging.Interfaces.dll",
-        "lib/net45/Microsoft.Framework.Logging.Interfaces.xml",
-        "lib/portable-net451+win81+wpa81/Microsoft.Framework.Logging.Interfaces.dll",
-        "lib/portable-net451+win81+wpa81/Microsoft.Framework.Logging.Interfaces.xml"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
     "": [
-      "DD4T.Core.Contracts ",
-      "Microsoft.Framework.Logging.Interfaces >= 1.0.0-beta5"
+      "DD4T.Core.Contracts "
     ],
     "DNX,Version=v4.5.1": []
   }

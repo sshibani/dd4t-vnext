@@ -98,7 +98,7 @@ namespace DD4T.Utils
         {
             get
             {
-                throw new NotImplementedException();
+                return false;
             }
         }
 
