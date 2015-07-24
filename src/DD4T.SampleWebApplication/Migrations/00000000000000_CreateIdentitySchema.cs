@@ -154,7 +154,7 @@ namespace DD4T.SampleWebApplication.Migrations
 
         public override string ProductVersion
         {
-            get { return "7.0.0-beta4"; }
+            get { return "7.0.0-beta5"; }
         }
 
         public override IModel Target

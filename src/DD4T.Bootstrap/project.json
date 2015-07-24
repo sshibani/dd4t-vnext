@@ -2,8 +2,7 @@
     "version": "1.0.0-*",
     "dependencies": {
       "Microsoft.AspNet.Mvc": "6.0.0-beta5",
-      "Microsoft.Framework.OptionsModel": "1.0.0-beta4",   
-      "Microsoft.Framework.DependencyInjection.Interfaces": "1.0.0-beta4",
+      "Microsoft.Framework.OptionsModel": "1.0.0-beta5",   
       "DD4T.ContentModel": "",
       "DD4T.Providers.Mock": "",
       "DD4T.Factories": "",

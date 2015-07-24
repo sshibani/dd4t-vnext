@@ -20,9 +20,9 @@ namespace DD4T.Bootstrap
 
         public static void AddDD4T(this IServiceCollection services)
         {
-            var configuration = new Configuration()
-                .AddJsonFile("config.json")
-                .AddEnvironmentVariables();
+           //var configuration = new Configuration()
+           //     .AddJsonFile("config.json")
+           //     .AddEnvironmentVariables();
 
             //var config = JsonConvert.DeserializeObject<DD4TConfiguration>()
             //var x = configuration.GetSubKey("DD4TAppSettings");

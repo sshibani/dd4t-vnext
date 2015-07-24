@@ -26,13 +26,13 @@ namespace DD4T.Bootstrap
                 configureRoutes.Invoke(dd4tRoute);
 
             //add a constraintmap for requests for favicon.ico
-            //dd4tRoute.ServiceProvider.GetService<IOptions<RouteOptions>>().Options.ConstraintMap.Add("faviconIgnoreConstraint", typeof(IgnoreFaviconIcoRouteConstraint));
+            dd4tRoute.ServiceProvider.GetService<IOptions<RouteOptions>>().Options.ConstraintMap.Add("faviconIgnoreConstraint", typeof(IgnoreFaviconIcoRouteConstraint));
       
             //Always map the default route and apply the favicon ignore constaint           
             dd4tRoute.MapRoute(
                     name: "TridionPage",
                     template: "{*PageUrl:faviconIgnoreConstraint}",
-                    defaults: new { controller = "Page", action = "Page" } // action = "PageAsync" }
+                    defaults: new { controller = "Home", action = "Index" } // action = "PageAsync" }
                     //defaults: new { controller = "ComponentPresentation", action = "CP" }                   
                     );
                         
