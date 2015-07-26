@@ -1,20 +1,15 @@
 ﻿using DD4T.ContentModel;
-using DD4T.ContentModel.Contracts.Providers;
+using DD4T.Core.Contracts.Providers;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DD4T.Providers.Rest
+namespace DD4T.Providers.Rest.Async
 {
-    public class TridionPageProvider : BaseProvider, IPageProvider
+    public class TridionPageProviderAsync : BaseProviderAsync, IPageProviderAsync
     {
         private const string controller = "api/page";
-        public TridionPageProvider(IProvidersFacade facade)
-            :base(facade)
+        public TridionPageProviderAsync(IProviderCommonServices commonServices)
+            :base(commonServices)
         {
 
         }

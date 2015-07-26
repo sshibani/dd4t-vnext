@@ -1,18 +1,13 @@
 ﻿using DD4T.ContentModel;
-using DD4T.ContentModel.Contracts.Providers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DD4T.Core.Contracts.Providers;
 
-namespace DD4T.Providers.Rest
+namespace DD4T.Providers.Rest.Async
 {
-    public class TridionLinkProvider : BaseProvider, ILinkProvider
+    public class TridionLinkProviderAsync : BaseProviderAsync, ILinkProviderAsync
     {
         private const string controller = "api/link";
-        public TridionLinkProvider(IProvidersFacade facade)
-            :base(facade)
+        public TridionLinkProviderAsync(IProviderCommonServices commonServices)
+            :base(commonServices)
         {
 
         }

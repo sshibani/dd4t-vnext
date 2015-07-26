@@ -1,5 +1,5 @@
 ﻿using DD4T.ContentModel;
-using DD4T.ContentModel.Contracts.Providers;
+using DD4T.Core.Contracts.Providers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD4T.Providers.Rest
+namespace DD4T.Providers.Rest.Async
 {
-    public class TridionBinaryProvider : BaseProvider, IBinaryProvider
+    public class TridionBinaryProviderAsync : BaseProviderAsync, IBinaryProviderAsync
     {
         private const string controller = "api/binary";
-        public TridionBinaryProvider(IProvidersFacade facade)
-            :base(facade)
+        public TridionBinaryProviderAsync(IProviderCommonServices commonServices)
+            :base(commonServices)
         {
 
         }

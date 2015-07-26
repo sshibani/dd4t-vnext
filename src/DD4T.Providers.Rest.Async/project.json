@@ -1,0 +1,19 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "",
+  "authors": [ "" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "DD4T.Core.Contracts": "",
+    "Microsoft.Net.Http": "2.2.29"
+    
+  },
+
+  "frameworks" : {
+    "dnx451": { }
+    
+  }
+}

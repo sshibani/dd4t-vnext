@@ -1,29 +1,30 @@
-﻿using DD4T.ContentModel.Contracts.Configuration;
-using DD4T.ContentModel.Contracts.Logging;
-using DD4T.ContentModel.Contracts.Providers;
-using DD4T.ContentModel.Contracts.Resolvers;
+﻿
+using DD4T.Core.Contracts.Configuration;
+using DD4T.Core.Contracts.Logging;
+using DD4T.Core.Contracts.Providers;
+using DD4T.Core.Contracts.Resolvers;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
 
-namespace DD4T.Providers.Rest
+namespace DD4T.Providers.Rest.Async
 {
-    public class BaseProvider : IProvider
+    public class BaseProviderAsync : IProviderAsync
     {
 
-        private readonly IPublicationResolver PublicationResolver;
-        protected readonly ILogger LoggerService;
-        protected readonly IDD4TConfiguration Configuration;
+        private readonly IPublicationResolverAsync PublicationResolver;
+        protected readonly ILoggerAsync LoggerService;
+        protected readonly IDD4TConfigurationAsync Configuration;
 
-        public BaseProvider(IProvidersFacade providersFacade)
+        public BaseProviderAsync(IProviderCommonServices providersCommonServices)
         {
-            if (providersFacade == null)
-                throw new ArgumentNullException("providersFacade");
+            if (providersCommonServices == null)
+                throw new ArgumentNullException("providersCommonServices");
 
-            LoggerService = providersFacade.Logger;
-            PublicationResolver = providersFacade.PublicationResolver;
-            Configuration = providersFacade.Configuration;
+            LoggerService = providersCommonServices.Logger;
+            PublicationResolver = providersCommonServices.PublicationResolver;
+            Configuration = providersCommonServices.Configuration;
         }
 
         private int publicationId = 0;
@@ -66,7 +67,7 @@ namespace DD4T.Providers.Rest
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                return response.Content.ReadAsAsync<T>().Result;
+                //return response.Content.ReadAsAsync<T>().Result;
             }
             return default(T);
         }

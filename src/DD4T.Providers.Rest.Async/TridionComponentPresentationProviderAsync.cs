@@ -1,18 +1,15 @@
 ﻿using DD4T.ContentModel;
-using DD4T.ContentModel.Contracts.Providers;
+using DD4T.Core.Contracts.Providers;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DD4T.Providers.Rest
+namespace DD4T.Providers.Rest.Async
 {
-    public class TridionComponentPresentationProvider : BaseProvider, IComponentPresentationProvider
+    public class TridionComponentPresentationProviderAsync : BaseProviderAsync, IComponentPresentationProviderAsync
     {
         private const string controller = "api/componentpresentation";
-        public TridionComponentPresentationProvider(IProvidersFacade facade)
-            : base(facade)
+        public TridionComponentPresentationProviderAsync(IProviderCommonServices commonServices)
+            : base(commonServices)
         {
 
         }
