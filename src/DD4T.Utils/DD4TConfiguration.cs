@@ -110,13 +110,7 @@ namespace DD4T.Utils
             }
         }
 
-        public ProviderVersion ProviderVersion
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+     
 
         public int PublicationId
         {

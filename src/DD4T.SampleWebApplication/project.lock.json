@@ -1296,72 +1296,6 @@
           "lib/dnx451/Microsoft.Framework.Configuration.Ini.dll": {}
         }
       },
-      "Microsoft.Framework.ConfigurationModel/1.0.0-beta5-11252": {
-        "dependencies": {
-          "Microsoft.Framework.ConfigurationModel.Interfaces": "1.0.0-beta5-11252"
-        },
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.dll": {}
-        }
-      },
-      "Microsoft.Framework.ConfigurationModel.Interfaces/1.0.0-beta5-11252": {
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.Interfaces.dll": {}
-        }
-      },
-      "Microsoft.Framework.ConfigurationModel.Json/1.0.0-beta5-11252": {
-        "dependencies": {
-          "Newtonsoft.Json": "6.0.6",
-          "Microsoft.Framework.ConfigurationModel": "1.0.0-beta5-11252"
-        },
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll": {}
-        }
-      },
-      "Microsoft.Framework.ConfigurationModel.UserSecrets/1.0.0-beta5-10212": {
-        "dependencies": {
-          "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta5-11252"
-        },
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.UserSecrets.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Framework.ConfigurationModel.UserSecrets.dll": {}
-        }
-      },
       "Microsoft.Framework.DependencyInjection/1.0.0-beta5": {
         "dependencies": {
           "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta5"
@@ -2438,7 +2372,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0-rc3": {
-      "sha512": "K+Vgi95hm/sorMO3M4JybasGbNv2ISDJMMFZsObSlozOK2maJosyLMQWAo0ZmJaqKd43CPzwhQB3MZMh6Hfnpw==",
+      "sha512": "+IAgIbixhE1YdjviBfJhQ8oS9Xc+gYabKYJi5T46RnhCtC67ZQ133ebrnLLpocx2DfTPx4GdNkGt+XRfFbcF5Q==",
       "files": [
         "Microsoft.CodeAnalysis.Analyzers.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.Analyzers.1.0.0-rc3.nupkg.sha512",
@@ -2453,7 +2387,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Common/1.0.0-rc3": {
-      "sha512": "sON3pTdJhYzdn/LQ8bak9dNqR3EE+4FzOdxaX0lG6z4vdi0PYRZRtd5ezkdZq/mb9QIf4HFQgT7wAxd0Qzx1Eg==",
+      "sha512": "7EdIn8+hBhoTnrosydREV22RZmqB5jDFfNSjlpsrV9S1BSJtRPhhKdt2aAgIF0K6grsdlsP8j+UFxpEHKNDWvQ==",
       "files": [
         "Microsoft.CodeAnalysis.Common.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.Common.1.0.0-rc3.nupkg.sha512",
@@ -2466,7 +2400,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.CSharp/1.0.0-rc3": {
-      "sha512": "HA7zSHvHhc6E0uG87EAglgCMAqrRdgK3BYHVoOA0ZPoQ/V60FtU3/w599uQ/QsJ09ufMwP6CvFp0m3IBiM/GTw==",
+      "sha512": "zG7yPqO6BDq6pPOg0pno8MV7ijiFuYMh6rETuSFp0p9nVWRhoVaVj4sgTVZ3dYyRQqiaSVAeEvOk0vLyCPCLMA==",
       "files": [
         "Microsoft.CodeAnalysis.CSharp.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.CSharp.1.0.0-rc3.nupkg.sha512",
@@ -2709,68 +2643,6 @@
         "lib/dotnet/Microsoft.Framework.Configuration.Ini.xml",
         "lib/net45/Microsoft.Framework.Configuration.Ini.dll",
         "lib/net45/Microsoft.Framework.Configuration.Ini.xml"
-      ]
-    },
-    "Microsoft.Framework.ConfigurationModel/1.0.0-beta5-11252": {
-      "serviceable": true,
-      "sha512": "eTWHfb8wcB5QNl3nA5HNl2ZCuFLAU0sf/VAewT4bDV/CkvSlyh8aZcF+RQg0ZlSJM3ryyE388VJjMFKflsYsSA==",
-      "files": [
-        "Microsoft.Framework.ConfigurationModel.1.0.0-beta5-11252.nupkg",
-        "Microsoft.Framework.ConfigurationModel.1.0.0-beta5-11252.nupkg.sha512",
-        "Microsoft.Framework.ConfigurationModel.nuspec",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.dll",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.xml",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.dll",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.xml",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.dll",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.xml",
-        "lib/portable-net45+win/Microsoft.Framework.ConfigurationModel.dll",
-        "lib/portable-net45+win/Microsoft.Framework.ConfigurationModel.xml"
-      ]
-    },
-    "Microsoft.Framework.ConfigurationModel.Interfaces/1.0.0-beta5-11252": {
-      "serviceable": true,
-      "sha512": "0X5nbqQFPKtx+2Eg/PDMD/qvmG6znNN00WuPr9fBqsp2IjhyDX1o9bHByMLGAmIzE/8oSJ4BnABylSv3llw1Pg==",
-      "files": [
-        "Microsoft.Framework.ConfigurationModel.Interfaces.1.0.0-beta5-11252.nupkg",
-        "Microsoft.Framework.ConfigurationModel.Interfaces.1.0.0-beta5-11252.nupkg.sha512",
-        "Microsoft.Framework.ConfigurationModel.Interfaces.nuspec",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Interfaces.dll",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Interfaces.xml",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Interfaces.dll",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Interfaces.xml",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.Interfaces.dll",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.Interfaces.xml",
-        "lib/portable-net45+win/Microsoft.Framework.ConfigurationModel.Interfaces.dll",
-        "lib/portable-net45+win/Microsoft.Framework.ConfigurationModel.Interfaces.xml"
-      ]
-    },
-    "Microsoft.Framework.ConfigurationModel.Json/1.0.0-beta5-11252": {
-      "serviceable": true,
-      "sha512": "duCRrm00nipQx+K6AhqWDYBBH3RzrkRT28ZRNf/ECkx9pzAo11W/kMKinosTfoB1XCJeWOZrPpgcFPyA5JUwWA==",
-      "files": [
-        "Microsoft.Framework.ConfigurationModel.Json.1.0.0-beta5-11252.nupkg",
-        "Microsoft.Framework.ConfigurationModel.Json.1.0.0-beta5-11252.nupkg.sha512",
-        "Microsoft.Framework.ConfigurationModel.Json.nuspec",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.xml",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.dll",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.xml",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.Json.dll",
-        "lib/net45/Microsoft.Framework.ConfigurationModel.Json.xml"
-      ]
-    },
-    "Microsoft.Framework.ConfigurationModel.UserSecrets/1.0.0-beta5-10212": {
-      "serviceable": true,
-      "sha512": "C2k/1g954wEGuUfhkdDGDpKC+4ysd4A0t4A1oMCZWklVEQQ9cqXq7YLDqWEDatckBs4gm5YIs707ko+zoZXJBQ==",
-      "files": [
-        "Microsoft.Framework.ConfigurationModel.UserSecrets.1.0.0-beta5-10212.nupkg",
-        "Microsoft.Framework.ConfigurationModel.UserSecrets.1.0.0-beta5-10212.nupkg.sha512",
-        "Microsoft.Framework.ConfigurationModel.UserSecrets.nuspec",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.UserSecrets.dll",
-        "lib/dnx451/Microsoft.Framework.ConfigurationModel.UserSecrets.xml",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.UserSecrets.dll",
-        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.UserSecrets.xml"
       ]
     },
     "Microsoft.Framework.DependencyInjection/1.0.0-beta5": {
@@ -3016,7 +2888,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.BrowserLink.Loader/14.0.0-beta5": {
-      "sha512": "qKyw00koXSuLRKI+GOkdHn9FyuE21R93GZyWmVJZYXg4scb2ki3NlGT954mEVxx5WN4yqRqywe2Rc+4MSqbq1w==",
+      "sha512": "O4S+wvsm7j0/JbsP7Ol1cg99qPOXt4c2UMdegdZUKkQBxu0dMooWdHRoLQM+MJi/DP3YrEVLjRK8NXjZpZSEIg==",
       "files": [
         "Microsoft.VisualStudio.Web.BrowserLink.Loader.14.0.0-beta5.nupkg",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader.14.0.0-beta5.nupkg.sha512",

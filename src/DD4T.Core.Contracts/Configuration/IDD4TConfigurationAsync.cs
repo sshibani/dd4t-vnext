@@ -1,12 +1,11 @@
-﻿using DD4T.ContentModel.Contracts.Providers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 
-namespace DD4T.ContentModel.Contracts.Configuration
+namespace DD4T.Core.Contracts.Configuration
 {
-    public interface IDD4TConfiguration
+    public interface IDD4TConfigurationAsync
     {
         int PublicationId { get; }
         string DefaultPage { get; }

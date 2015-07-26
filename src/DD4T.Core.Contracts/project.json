@@ -2,7 +2,7 @@
   "version": "1.0.0-*",
   "dependencies": {
     "DD4T.ContentModel.Contracts": "",
-    "DD4T.ContentModel": ""
+    "DD4T.ContentModel": "" 
   },
   "frameworks": {
     "dnx451": { }

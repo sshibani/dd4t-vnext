@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 
-namespace DD4T.ContentModel.Contracts.Logging
+namespace DD4T.Core.Contracts.Logging
 {
-    [Obsolete("user the Async version of the interface in DD4T.Core.Contracts")]
     public enum LoggingCategory { General, Controller, View, Model, System, Integration, Performance }
-    [Obsolete("user the Async version of the interface in DD4T.Core.Contracts")]
-    public interface ILogger
+    public interface ILoggerAsync
     {
         void Debug(string message, params object[] parameters);
         void Debug(string message, LoggingCategory category, params object[] parameters);
