@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E27C0B1-7F6A-433A-843A-A12606A1A7E9}"
 EndProject
@@ -31,6 +31,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DD4T.WebApplication", "src\DD4T.WebApplication\DD4T.WebApplication.xproj", "{3097C88D-D0BC-4E75-8918-088451081152}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DD4T.Providers.Rest.Async", "src\DD4T.Providers.Rest.Async\DD4T.Providers.Rest.Async.xproj", "{0B978096-32F2-440A-85FA-1503FFCFABB3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DD4T.Providers.Mock", "src\DD4T.Providers.Mock\DD4T.Providers.Mock.xproj", "{D45E8B64-3730-4960-9F59-B8D477FE7796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{0B978096-32F2-440A-85FA-1503FFCFABB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B978096-32F2-440A-85FA-1503FFCFABB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B978096-32F2-440A-85FA-1503FFCFABB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45E8B64-3730-4960-9F59-B8D477FE7796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45E8B64-3730-4960-9F59-B8D477FE7796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45E8B64-3730-4960-9F59-B8D477FE7796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45E8B64-3730-4960-9F59-B8D477FE7796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +96,6 @@ Global
 		{CB0ACB6D-9CC6-4FF0-BD6D-CFD83C2988FB} = {E4D83A0D-A385-44E6-B863-9992429AB02F}
 		{3097C88D-D0BC-4E75-8918-088451081152} = {4E27C0B1-7F6A-433A-843A-A12606A1A7E9}
 		{0B978096-32F2-440A-85FA-1503FFCFABB3} = {E4D83A0D-A385-44E6-B863-9992429AB02F}
+		{D45E8B64-3730-4960-9F59-B8D477FE7796} = {4E27C0B1-7F6A-433A-843A-A12606A1A7E9}
 	EndGlobalSection
 EndGlobal

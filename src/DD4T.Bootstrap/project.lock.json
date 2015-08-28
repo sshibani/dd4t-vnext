@@ -1207,7 +1207,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0-rc3": {
-      "sha512": "+IAgIbixhE1YdjviBfJhQ8oS9Xc+gYabKYJi5T46RnhCtC67ZQ133ebrnLLpocx2DfTPx4GdNkGt+XRfFbcF5Q==",
+      "sha512": "K+Vgi95hm/sorMO3M4JybasGbNv2ISDJMMFZsObSlozOK2maJosyLMQWAo0ZmJaqKd43CPzwhQB3MZMh6Hfnpw==",
       "files": [
         "Microsoft.CodeAnalysis.Analyzers.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.Analyzers.1.0.0-rc3.nupkg.sha512",
@@ -1222,7 +1222,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Common/1.0.0-rc3": {
-      "sha512": "7EdIn8+hBhoTnrosydREV22RZmqB5jDFfNSjlpsrV9S1BSJtRPhhKdt2aAgIF0K6grsdlsP8j+UFxpEHKNDWvQ==",
+      "sha512": "sON3pTdJhYzdn/LQ8bak9dNqR3EE+4FzOdxaX0lG6z4vdi0PYRZRtd5ezkdZq/mb9QIf4HFQgT7wAxd0Qzx1Eg==",
       "files": [
         "Microsoft.CodeAnalysis.Common.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.Common.1.0.0-rc3.nupkg.sha512",
@@ -1235,7 +1235,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.CSharp/1.0.0-rc3": {
-      "sha512": "zG7yPqO6BDq6pPOg0pno8MV7ijiFuYMh6rETuSFp0p9nVWRhoVaVj4sgTVZ3dYyRQqiaSVAeEvOk0vLyCPCLMA==",
+      "sha512": "HA7zSHvHhc6E0uG87EAglgCMAqrRdgK3BYHVoOA0ZPoQ/V60FtU3/w599uQ/QsJ09ufMwP6CvFp0m3IBiM/GTw==",
       "files": [
         "Microsoft.CodeAnalysis.CSharp.1.0.0-rc3.nupkg",
         "Microsoft.CodeAnalysis.CSharp.1.0.0-rc3.nupkg.sha512",
