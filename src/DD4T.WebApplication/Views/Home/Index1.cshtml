@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // ViewBag.Title = "Home Page";
+}
+@addtaghelper "DD4T.XPM.TagHelpers"
+
+<form asp-controller="Products" asp-action="Create" method="post">
+<div>
+    <label xpmTag-for="Title">Name:</label>
+    <label xpmTag-for="Body" ></label>
+</div>

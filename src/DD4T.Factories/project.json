@@ -5,13 +5,13 @@
     "DD4T.Serialization": "",
     "DD4T.ContentModel.Contracts": "",
     "DD4T.Utils": "",
-    "Newtonsoft.Json": "6.0.6",
-    "Microsoft.Framework.OptionsModel": "1.0.0-beta5"
+    "Newtonsoft.Json" : "6.0.8"
 
   },
 
   "frameworks": {
-    "dnx451": { }
+    "dnx451": { },
+    "dnxcore50": { }
   }
 }
   

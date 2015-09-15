@@ -21,9 +21,9 @@ namespace DD4T.WebApplication.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var viewEngineResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewData.ViewName);
-            var path = ((BuildManagerCompiledView)viewEngineResult.View).ViewPath;
-            BuildManager.GetCompiledType(viewPath)
+            //var viewEngineResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewData.ViewName);
+            //var path = ((BuildManagerCompiledView)viewEngineResult.View).ViewPath;
+            //BuildManager.GetCompiledType(viewPath)
             IPage s = null;
             var page = _pageFactory.TryFindPage("/", out s);
             return View(s);

@@ -8,10 +8,12 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>a3f1f4ce-e7da-451e-a35a-a12efc8a8bb1</ProjectGuid>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <RootNamespace>DD4T.Serialization</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>

@@ -22,10 +22,10 @@ namespace DD4T.WebApplication
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseMyCustomAuthentication();
+
             app.UseMvc();
             app.UseDD4T();
-            app.UseDD4TBinary();
+
             app.UseErrorPage();
         }
     }
