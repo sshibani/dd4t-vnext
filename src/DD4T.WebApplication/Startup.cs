@@ -23,9 +23,9 @@ namespace DD4T.WebApplication
         public void Configure(IApplicationBuilder app)
         {
 
-            app.UseMvc();
+            app.UseMvc(); 
+            app.UseStaticFiles();
             app.UseDD4T();
-
             app.UseErrorPage();
         }
     }

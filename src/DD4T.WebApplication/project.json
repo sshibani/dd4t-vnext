@@ -1,4 +1,4 @@
-﻿{
+{
   "webroot": "wwwroot",
   "version": "1.0.0-*",
 
@@ -9,7 +9,8 @@
     "Microsoft.AspNet.Server.WebListener": "1.0.0-beta7",
     "Microsoft.AspNet.Diagnostics": "1.0.0-beta7",
     "Microsoft.Framework.Logging.Console": "1.0.0-beta7",
-    "DD4T.Bootstrap": ""
+    "DD4T.Bootstrap": "",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta7"
   },
 
   "commands": {
