@@ -22,12 +22,17 @@ namespace DD4T.WebApplication
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseMyCustomAuthentication();
             app.UseMvc();
             app.UseDD4T();
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
+            app.UseDD4TBinary();
+            app.UseErrorPage();
         }
+    }
+
+    public static class test
+    {
+        public static void UseMyCustomAuthentication(this IApplicationBuilder builder) { }
+        public static void UseDD4TBinary(this IApplicationBuilder builder) { }
     }
 }

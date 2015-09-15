@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 using DD4T.ContentModel.Factories;
 using DD4T.ContentModel;
 
+
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DD4T.WebApplication.Controllers
@@ -20,6 +21,9 @@ namespace DD4T.WebApplication.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            var viewEngineResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewData.ViewName);
+            var path = ((BuildManagerCompiledView)viewEngineResult.View).ViewPath;
+            BuildManager.GetCompiledType(viewPath)
             IPage s = null;
             var page = _pageFactory.TryFindPage("/", out s);
             return View(s);

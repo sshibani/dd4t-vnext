@@ -62,6 +62,9 @@
     <h2>@cp.Component.Fields["headline"].Value</h2>
     <p>@Html.Raw(cp.Component.Fields["articleBody"].EmbeddedValues[0]["content"].Value)</p>
 }
+    <div class="col-md-4">
+        @await Component.InvokeAsync("ArticleList", 2, true)
+    </div>
 
 </body>
 </html>
